@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Kata.BankOCR.Tests
@@ -6,15 +7,15 @@ namespace Kata.BankOCR.Tests
     public class FaxInputHandlerParser
     {
         [Theory]
-        [InlineData("     |  |", 0)]
-        [InlineData(" _  _||_ ", 1)]
-        [InlineData(" _  _| _|", 2)]
-        [InlineData("   |_|  |", 3)]
-        [InlineData(" _ |_  _|", 4)]
-        [InlineData(" _ |_ |_|", 5)]
-        [InlineData(" _   |  |", 6)]
-        [InlineData(" _ |_||_|", 7)]
-        [InlineData(" _ |_| _|", 8)]
+        [InlineData("     |  |   ", 0)]
+        [InlineData(" _  _||_    ", 1)]
+        [InlineData(" _  _| _|   ", 2)]
+        [InlineData("   |_|  |   ", 3)]
+        [InlineData(" _ |_  _|   ", 4)]
+        [InlineData(" _ |_ |_|   ", 5)]
+        [InlineData(" _   |  |   ", 6)]
+        [InlineData(" _ |_||_|   ", 7)]
+        [InlineData(" _ |_| _|   ", 8)]
         public void ParseInput_CorrectInput_ReadsInputCorrectly(string expected, int index)
         {
             FaxInputParser parser = new FaxInputParser();
