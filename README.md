@@ -1,2 +1,2 @@
 # Kata.BankOCR
-https://github.com/MantasVa/Kata.GildedRose
+https://codingdojo.org/kata/BankOCR/
